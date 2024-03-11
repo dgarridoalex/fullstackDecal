@@ -8,15 +8,18 @@ h1 {
 h2 {
     text-align: center;
 }
+h3 {
+    text-align: center;
+}
 textarea {
-    border: 2px solid 	#000000;
+    padding: 10px;
+    border: 1px solid 	#ccc;
     width: 50%;
 }
 input {
-    border: 2px solid	#000000;
+    border: 1px solid	#ccc;
+    padding: 5px;
 }
-
-
 .interest-list {
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +39,25 @@ input {
     width: 300px;
     margin-right: 10px; 
 }
+.subheader ul {
+    list-style-type: square;
+}
 
 .subheader img {
     display: block;
-    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     height: auto;
     margin-top: 10px;
+    transition: transform 0.4s ease;
+}
+.subheader:hover img {
+    transform: scale(1.2);
+}
+
+.subList {
+    list-style: square;
 }
 
 .catPage {
@@ -53,3 +69,22 @@ input {
 #title-block {
     font-size: 50px;
 }
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#catButton {
+    background-color: greenyellow; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#catButton:hover {
+    background-color: #269a22;
+}   

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1 id="title-block">Welcome to my personal website!</h1>
+    <h1 id="title-block">Welcome to my website!</h1> Total views: <%= views %>
     <h2>About me</h2>
     <p>Hello! I am Daniel, a first year student at UC Berkeley studying computer science. I am originally from Los Angeles, but now live in the Bay Area for school. I am an aspiring software engineer.</p>
     <h3>Some of my interests</h3>
@@ -18,36 +18,38 @@
                     <li>Soulslikes: Dark Souls, Bloodborne, Sekiro, Elden Ring</li>
                     <li>Various other genres and games: FIFA, Minecraft, Nier</li>
                 </ul>
-                <img src="bonfire-darksouls.gif" alt="Dark Souls">
+                <img id="dsImage" src="bonfire-darksouls.gif" alt="Dark Souls">
             </li>
             <li class="subheader">Movies
                 <ul>
                     <li>Any Christopher Nolan movie: Interstellar, Inception, Oppenheimer</li>
-                    <li>Zodiac, Nightcrawler, Arrival, Seven, Star Wars, </li>
+                    <li>Zodiac, Nightcrawler, Arrival, Seven, </li>
                 </ul>
-                <img src="star-wars-r2-d2-pixel-animated-custom-cursor.gif" alt="Star Wars">
+                <img id="movieImage" src="4831192.png" alt="Cinema">
             </li>
             <li class="subheader">TV
                 <ul>
-                    <li>Parks and Recreation, Community, Fullmetal Alchemist, Dragon Ball</li>
+                    <li>Succesion, Parks and Recreation, Community, Fullmetal Alchemist, Dragon Ball</li>
                 </ul>
-                <img src="200_d.gif" alt="Dragon Ball">
+                <img id="dbImage" src="200_d.gif" alt="Dragon Ball">
             </li>
             <li class="subheader">Soccer
                 <ul>
                     <li>HUGE Messi fan</li>
                 </ul>
-                <img src="Lionel Messi - FootyRenders.png" width="275px" height="300px">
+                <img id="messiImage" src="Lionel Messi - FootyRenders.png" width="275px" height="300px">
             </li>
             <li class="subheader">Basketball
                 <ul>
                     <li>Los Angeles Lakers (obviously)</li>
                 </ul>
-                <img src="Los_Angeles_Lakers_logo.svg.png" alt="Lakers" width="350px" height="250">
+                <img id="lakersImage" src="Los_Angeles_Lakers_logo.svg.png" alt="Lakers" width="350px" height="250">
             </li>
         </ul>
     </div>
-    
+    <h3 id="Mode">Click here for dark mode</h3>
+    <button id="modeButton" type="button">Dark Mode</button>
+    <br>
     <h2>Contact me!</h2>
     <form action="" method="POST">
         <label for="name">Name:</label><br>
@@ -60,6 +62,6 @@
     </form>
     <br>
     <a href="cats.html">DON'T CLICK!!!</a>
-    
+    <script src="script.js"></script>
 </body>
 </html>
