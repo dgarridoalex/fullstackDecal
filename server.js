@@ -1,17 +1,31 @@
 const express = require('express');
 const fs = require('fs');
-const ejs = require('ejs')
 const path = require('path');
 const app = express();
 const port = 3000;
 
-// Serve static files (CSS, JS, images)
-app.use(express.static(path.join(__dirname)));
-
+function getCookie(cookieString, name) {
+    if (cookieString) {
+      let cookie = cookieString.split(';').find(cookie => cookie.trim().startsWith(`${name}=`));
+      if (cookie) {
+        return parseInt(cookie.split('=')[1]); // Parse the cookie value as an integer
+      }
+    }
+    return 0;
+  }
+  
 // Serve HTML files
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    let totalViews = getCookie(req.headers.cookie, 'views');
+    totalViews++;
+    let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+    html = html.replace('{{views}}', totalViews)
+    res.setHeader('Set-Cookie', `views=${totalViews}`)
+    res.send(html);
 });
+
+// Serve static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname)));
 
 app.get('/cats', (req, res) => {
   res.sendFile(path.join(__dirname, 'cats.html'));
@@ -20,17 +34,4 @@ app.get('/cats', (req, res) => {
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
-});
-
-let totalViews = 0;
-
-app.get('/', (req, res) => {
-  totalViews++;
-  let html = fs.readFileSync(__dirname + '/index.html', 'utf8');
-  html = ejs.render(html, {views: totalViews});
-  res.send(html);
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
 });

@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1 id="title-block">Welcome to my website!</h1> Total views: <%= views %>
+    <h1 id="title-block">Welcome to my website!</h1>
+    <p>Total views: {{views}}</p>
     <h2>About me</h2>
     <p>Hello! I am Daniel, a first year student at UC Berkeley studying computer science. I am originally from Los Angeles, but now live in the Bay Area for school. I am an aspiring software engineer.</p>
     <h3>Some of my interests</h3>
@@ -51,7 +52,7 @@
     <button id="modeButton" type="button">Dark Mode</button>
     <br>
     <h2>Contact me!</h2>
-    <form action="" method="POST">
+    <form action="" method="">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
         <label for="email">Email:</label><br>
