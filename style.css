@@ -17,6 +17,33 @@ input {
 }
 
 
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subheader {
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px; 
+}
+
+.subheader img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 .catPage {
     background-image: url(NvL.gif);
     background-size: cover;
