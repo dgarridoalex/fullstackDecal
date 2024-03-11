@@ -4,41 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Welcome to my personal website!</h1>
+    <h1 id="title-block">Welcome to my personal website!</h1>
     <h2>About me</h2>
     <p>Hello! I am Daniel, a first year student at UC Berkeley studying computer science. I am originally from Los Angeles, but now live in the Bay Area for school. I am an aspiring software engineer.</p>
     <h3>Some of my interests</h3>
     <ul>
-        <li>Gaming</li>
-        <ul>
-            <li>Soulslikes: Dark Souls, Bloodborne, Sekiro, Elden Ring</li>
-            <li>Various other genres and games: FIFA, Minecraft, Nier</li>
-        </ul>
-        <img src="bonfire-darksouls.gif" alt="Dark Souls">
-        <li>Movies</li>
-        <ul>
-            <li>Any Christopher Nolan movie: Interstellar, Inception, Oppenheimer</li>
-            <li>Zodiac, Nightcrawler, Arrival, Seven, Star Wars, </li>
-        </ul>
-        <img src="star-wars-r2-d2-pixel-animated-custom-cursor.gif" alt="Star Wars">
-        <li>TV</li>
-        <ul>
-            <li>Parks and Recreation, Community, Fullmetal Alchemist, Dragon Ball</li>
-        </ul>
-        <img src="200_d.gif" alt="Dragon Ball">
-        <li>Soccer</li>
-        <ul>
-            <li>HUGE Messi fan</li>
-        </ul>
-        <img src="Lionel Messi - FootyRenders.png" width="275px" height="300px">
-        <li>Basketball</li>
-        <ul>
-            <li>Los Angeles Lakers (obviously)</li>
-        </ul>
-        <img src="Los_Angeles_Lakers_logo.svg.png" alt="Lakers" width="350px" height="250">
+        <li class="subheader">Gaming
+            <ul>
+                <li>Soulslikes: Dark Souls, Bloodborne, Sekiro, Elden Ring</li>
+                <li>Various other genres and games: FIFA, Minecraft, Nier</li>
+            </ul>
+            <img src="bonfire-darksouls.gif" alt="Dark Souls">
+        </li>
+        <li class="subheader">Movies
+            <ul>
+                <li>Any Christopher Nolan movie: Interstellar, Inception, Oppenheimer</li>
+                <li>Zodiac, Nightcrawler, Arrival, Seven, Star Wars, </li>
+            </ul>
+            <img src="star-wars-r2-d2-pixel-animated-custom-cursor.gif" alt="Star Wars">
+        </li>
+        <li class="subheader">TV
+            <ul>
+                <li>Parks and Recreation, Community, Fullmetal Alchemist, Dragon Ball</li>
+            </ul>
+            <img src="200_d.gif" alt="Dragon Ball">
+        </li>
+        <li class="subheader">Soccer
+            <ul>
+                <li>HUGE Messi fan</li>
+            </ul>
+            <img src="Lionel Messi - FootyRenders.png" width="275px" height="300px">
+        </li>
+        <li class="subheader">Basketball
+            <ul>
+                <li>Los Angeles Lakers (obviously)</li>
+            </ul>
+            <img src="Los_Angeles_Lakers_logo.svg.png" alt="Lakers" width="350px" height="250">
+        </li>
     </ul>
+    
+        
     <h2>Contact me!</h2>
     <form action="" method="POST">
         <label for="name">Name:</label><br>
@@ -46,7 +54,7 @@
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
         <label for="message">Your message:</label><br>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea><br><br>
+        <textarea>This website is so amazing, I'm giving you an A+...</textarea>
         <input type="submit" value="Submit">
     </form>
     <br>
